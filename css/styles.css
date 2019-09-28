@@ -1,0 +1,188 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    /* Arial - безопасный шрифт, т.к. есть на всех ОС.*/
+    color: #000305;
+    font-size: 14px;
+    line-height: 1,5;
+    /*lh*/
+}
+
+a {
+    color: #c74350;
+    transition: color .4s linear,
+                background-color .4s linear;
+    padding: 0 1px;
+    /*плавность перехода цвета (для каких эл., за какое время, переходная функция*/
+}
+
+a:hover,
+/*смена фона при использовании ПК*/
+a:focus,
+/*смена фона при нажатии при использовании смртфонов и ПК*/
+a:active {
+/**/
+    color: #fff;
+    background-color: #c74350;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 800px;
+    width: 90%;
+    /*width - если экран меньше максимальной ширины (на телефоне), то ширина будет = указанной ширине выше*/
+    margin: 0 auto;
+    /*margin - отступ верх и низ = 0, авто = ставит по центру между шириной указанной выше*/
+}
+
+section {
+    background-color: rgb(241, 199, 120);
+    border-radius: 10px;
+    padding: 20px;
+    /*отступ от текста по всем фронтам*/
+    margin: 20px 0;
+    /*отступ от блоков сверху и снизу на 20, по бокам на 0*/
+}
+
+header {
+    padding: 30px 0 10px 0;
+}
+
+h2, h3, h4 {
+    font-weight: normal;
+    margin: 5px;
+}
+
+h2 {
+    font-size: 24px;
+    /*fz24*/
+    color: #c74350;
+    
+    margin: 0;
+}
+
+h3 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+h3 a {
+    text-decoration: none;
+    color: #000305;
+}
+
+h4 {
+    font-size: 20px;
+    color: #000305;
+}
+
+h4 a {
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+}
+
+.title,
+.subtitle,
+header a {
+    display: block;
+}
+
+header a {
+    color:#000305;
+    text-decoration: none;
+}
+
+header a:hover,
+header a:focus,
+header a:active {
+    background-color: transparent;
+    /*transparent = цвет фона - прозрачный*/
+    color: #c74350;
+}
+
+.title {
+    font-size: 50px;
+}
+
+.subtitle {
+    font-size: 18px;
+}
+
+.articles article {
+    padding: 0 0 10px;
+}
+
+.articles article:not(:last-of-type)
+/*Задает всем статьям кроме последней границу снизу*/ {
+    border-bottom: 1px solid red;
+/*.articles article + article {
+    border-top: 1px solid #eee*/
+    /*Обращение ко всем article, что если у article есть сосед, то снизу будет граница*/
+}
+
+/* Ctrl+/ = закомментировать что-нибудь, например, выделенный код. Повторная операция снимает комментарий*/
+
+.articles article + article {
+    border-top: 1px solid #eee;
+}
+
+.nav li {
+    border-bottom: 1px solid #fff;
+    /*solid = сплошная линия (есть пунктирные)*/
+}
+
+nav {
+    display: inline-block;
+    padding: 0;
+    list-style: none;
+}
+
+.nav a {
+    display: inline-block;
+    width: 100%;
+    padding: 5px;
+    text-decoration: none;
+    color: #000305;
+    border-bottom: #F4E3E3;
+}
+
+.nav a:hover,
+.nav a:focus,
+.nav a:active {
+    color: #F5F4EF;
+
+}
+
+footer section {
+    display: flex;
+}
+
+footer section div:first-child {
+    width: 40%;
+}
+
+footer section h4 {
+    margin: 0;
+    line-height: 1;
+}
+
+.copyright {
+    text-align: right; 
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+aside {
+    flex: 1 0 auto;
+    padding-right: 30px;
+}
